@@ -40,7 +40,7 @@ class Login(unittest.TestCase):
         self.chrome.implicitly_wait(5)
         self.chrome.find_element(*self.FORM_AUTH).click()
 
-    # se ruleaza dupa fiecare test si se inchde pagina dupa ce testul a fost terminat
+    # se ruleaza dupa fiecare test si inchde pagina dupa ce testul a fost terminat
     def tearDown(self):
         self.chrome.quit()
 
