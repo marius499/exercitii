@@ -124,7 +124,7 @@ class Login(unittest.TestCase):
         actual = self.chrome.current_url
         expected = 'https://the-internet.herokuapp.com/secure'
         self.assertEqual(expected, actual, 'URL nu e corect')
-        #self.chrome.find_elements(By.PARTIAL_LINK_TEXT, '/secure')[1].click()  # V2 Verifica ca noul url CONTINE /secure
+        self.chrome.find_elements(By.PARTIAL_LINK_TEXT, '/secure')[1].click()  # V2 Verifica ca noul url CONTINE /secure
         # clasa flash success e displayed
         sucessMessage = self.chrome.find_element(*self.CORRECT_LOGIN_MESSAGE)  # salvam eroare in error
         self.assertTrue(sucessMessage.is_displayed(), 'Mesajul de succes nu s-a afisat')
